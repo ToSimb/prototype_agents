@@ -4,8 +4,8 @@ import json
 import sys
 
 from config import (F_A_True,
-                    SERVERS_COUNT,
-                    BOARDS_COUNT,
+                    F_A_SERVERS_COUNT,
+                    F_A_BOARDS_COUNT,
                     F_B_True)
 
 def create_id(x:int, y:int):
@@ -36,8 +36,8 @@ if F_A_True:
 
     # формирование индексов
     data_dict = {}
-    for i in range(1, int(SERVERS_COUNT) + 1):
-        for j in range(1, int(BOARDS_COUNT) + 1):
+    for i in range(1, int(F_A_SERVERS_COUNT) + 1):
+        for j in range(1, int(F_A_BOARDS_COUNT) + 1):
             key = create_id(i, j)
             if key not in data_dict:
                 data_dict[key] = {}

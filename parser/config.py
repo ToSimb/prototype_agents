@@ -15,8 +15,8 @@ load_dotenv()
 
 # настройка API F-A
 F_A_True = os.environ.get('F_A_True')
-SERVERS_COUNT = os.environ.get('SERVERS_COUNT')
-BOARDS_COUNT = os.environ.get('BOARDS_COUNT')
+F_A_SERVERS_COUNT = os.environ.get('SERVERS_COUNT')
+F_A_BOARDS_COUNT = os.environ.get('BOARDS_COUNT')
 F_A_PROTOCOL = os.environ.get('F_A_PROTOCOL')
 F_A_IP = os.environ.get('F_A_IP')
 F_A_PORT = os.environ.get('F_A_PORT')

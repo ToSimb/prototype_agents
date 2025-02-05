@@ -7,8 +7,8 @@ import time
 import signal
 
 from config import (F_A_True,
-                    SERVERS_COUNT,
-                    BOARDS_COUNT,
+                    F_A_SERVERS_COUNT,
+                    F_A_BOARDS_COUNT,
                     F_A_PROTOCOL,
                     F_A_IP,
                     F_A_PORT,
@@ -98,8 +98,8 @@ try:
             data_dict = parse_response_data_FA(fa)
             id_count = len(data_dict)
         parser_time = time.time()
-        for i in range(1, int(SERVERS_COUNT) + 1):
-            for j in range(1, int(BOARDS_COUNT) + 1):
+        for i in range(1, int(F_A_SERVERS_COUNT) + 1):
+            for j in range(1, int(F_A_BOARDS_COUNT) + 1):
                 key = create_id(i, j)
                 if key not in data_dict:
                     data_dict[key] = {}
