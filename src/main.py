@@ -3,6 +3,7 @@ import sqlite3
 import os
 
 from fa.router import router as router_fa
+from fb.router import router as router_fb
 
 from logger.log_meddlewary import LogMiddleware
 from logger.logger import logger
@@ -25,6 +26,7 @@ async def shutdown():
     app.state.db_connection.close()
 
 app.include_router(router_fa)
+app.include_router(router_fb)
 
 @app.get("/")
 async def root():
